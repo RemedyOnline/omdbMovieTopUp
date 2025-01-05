@@ -11,7 +11,7 @@ const API_URL = "http://www.omdbapi.com?apikey=65b57874";
 const HomePage = () => {
 	const [movies, setMovies] = useState([]);
 	const [searchWord, setSearchWord] = useState("2025");
-	const [favorite, setFavorite] = useState([]);
+	const [favoriteMovies, setFavoriteMovies] = useState([]);
 
 	const fetchMovies = async (searchWord) => {
 		const request = await fetch(`${API_URL}&s=${searchWord}`);
@@ -28,20 +28,42 @@ const HomePage = () => {
 	}, [searchWord]);
 
 	const handleFavorite = (movieID) => {
-		setFavorite((prev) => ({
-			...prev,
-			[movieID]: !prev[movieID],
-		}));
+		const movie = movies.find((m) => m.imdbID === movieID);
+
+		setFavoriteMovies((prev) => {
+			const isMovieInFavorites = prev.some((m) => m.imdbID === movieID);
+
+			if (isMovieInFavorites) {
+				// Remove from favorites
+				return prev.filter((m) => m.imdbID !== movieID);
+			} else {
+				// Add to favorites
+				return [...prev, movie];
+			}
+		});
 	};
 
 	const renderCTAButtons = (movieID) => {
 		return () => (
 			<MovieCTAbuttons
-				isFavorite={favorite[movieID] || false}
+				isFavorite={favoriteMovies.some((m) => m.imdbID === movieID)}
 				onFavoriteClick={() => handleFavorite(movieID)}
 			/>
 		);
 	};
+
+	useEffect(() => {
+		// Load favorites from localStorage on mount
+		const savedFavorites = localStorage.getItem("favoriteMovies");
+		if (savedFavorites) {
+			setFavoriteMovies(JSON.parse(savedFavorites));
+		}
+	}, []);
+
+	useEffect(() => {
+		// Save favorites to localStorage whenever they change
+		localStorage.setItem("favoriteMovies", JSON.stringify(favoriteMovies));
+	}, [favoriteMovies]);
 
 	return (
 		<section className="h-full mx-auto my-auto items-center justify-start flex flex-col space-y-10 2xl:max-w-7xl text-textColor w-full p-5 ">
@@ -70,7 +92,7 @@ const HomePage = () => {
 						movies.map((movie) => (
 							<MovieCard
 								key={movie.imdbID}
-								// imdbID={movie.imdbID}
+								imdbID={movie.imdbID}
 								Poster={movie.Poster}
 								Type={movie.Type}
 								Year={movie.Year}
@@ -88,6 +110,25 @@ const HomePage = () => {
 					)}
 				</div>
 			</div>
+
+			{favoriteMovies.length > 0 && (
+				<div className="space-y-2 md:space-y-4 w-full">
+					<SectionHeading heading="My Favorites" />
+					<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+						{favoriteMovies.map((movie) => (
+							<MovieCard
+								key={movie.imdbID}
+								imdbID={movie.imdbID}
+								Poster={movie.Poster}
+								Type={movie.Type}
+								Year={movie.Year}
+								Title={movie.Title}
+								CTAbuttons={renderCTAButtons(movie.imdbID)}
+							/>
+						))}
+					</div>
+				</div>
+			)}
 		</section>
 	);
 };

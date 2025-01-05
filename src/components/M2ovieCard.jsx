@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
+import MovieCTAbuttons from "./MovieCTAbuttons";
 
-const MovieCard = ({ imdbID, Poster, Title, Type, Year, CTAbuttons }) => {
+const MovieCard = ({ imdbID, Poster, Title, Type, Year }) => {
 	return (
 		<section className="group">
 			<div className="flex flex-col text-center p-2 bg-cardBG rounded-xl shadow-md h-full justify-start items-center relative  max-w-md">
@@ -9,7 +10,7 @@ const MovieCard = ({ imdbID, Poster, Title, Type, Year, CTAbuttons }) => {
 				<p className="text-lg font-semibold ">{Title}</p>
 				<p>{Year}</p>
 				<p>{Type}</p>
-				<CTAbuttons />
+				<MovieCTAbuttons />
 			</div>
 		</section>
 	);
@@ -21,6 +22,5 @@ MovieCard.propTypes = {
 	Title: PropTypes.string,
 	Type: PropTypes.string,
 	Year: PropTypes.string,
-	CTAbuttons: PropTypes.func,
 };
 export default MovieCard;

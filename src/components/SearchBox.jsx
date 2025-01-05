@@ -1,22 +1,28 @@
-import { Search01Icon } from "hugeicons-react";
+import PropTypes from "prop-types";
 
-const SearchBox = (props) => {
+const SearchBox = ({ value, onChange }) => {
 	// console.log(props);
 
 	return (
-		<section>
-			<div className="w-2/3 md:w-1/2 bg-cyan-600 shadow-lg rounded-full py-1 px-5 flex gap-2 text-cyan-950 items-center">
+		<section className="w-full flex items-center justify-center">
+			<form className="w-2/3 md:w-3/5 lg:w-1/2 bg-inputBG shadow-lg rounded-full md:py-1 px-5 flex gap-2 items-center">
 				<input
 					type="search"
 					name="search"
 					id="search"
+					value={value}
+					onChange={onChange}
 					placeholder="Search for any movie..."
-					className="w-full bg-transparent placeholder:text-cyan-950 py-2 outline-none"
+					className="w-full bg-transparent placeholder:text-textColor py-2 outline-none"
 				/>
-				<Search01Icon />
-			</div>
+				🔍
+			</form>
 		</section>
 	);
 };
 
+SearchBox.propTypes = {
+	value: PropTypes.string,
+	onChange: PropTypes.func,
+};
 export default SearchBox;
