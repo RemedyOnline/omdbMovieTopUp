@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 
 const SectionHeading = (props) => {
 	return (
-		<div className="w-full">
-			<h2 className="text-2xl md:text-4xl lg:text-5xl font-bold w-fit">
+		<div className="text-nowrap w-fit ">
+			<h2 className="text-2xl md:text-4xl lg:text-5xl font-bold">
 				{props.heading}
 			</h2>
 		</div>

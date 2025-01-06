@@ -92,7 +92,7 @@ const HomePage = () => {
 					</div>
 					<div className="space-y-0 sm:space-y-2 md:space-y-4 w-full px-4 sm:px-6 lg:px-8 py-5 ">
 						<SectionHeading heading="Top Rated" />
-						<div className="flex overflow-x-scroll space-x-2">
+						<div className="flex overflow-x-scroll sm:space-x-2">
 							{topRatedMovies?.length > 0 ? (
 								topRatedMovies.map((topRated) => (
 									<MovieCard
@@ -153,11 +153,11 @@ const HomePage = () => {
 				</div>
 				{/* Favorite Section */}
 				<div className="space-y-0 sm:space-y-2 md:space-y-4 w-full">
-					<div className="flex items-center justify-between">
+					<div className="flex items-center justify-around">
 						<SectionHeading heading="My Favorite" />
 						<button
 							onClick={toggleViewMode}
-							className="md:text-lg font-semibold text-nowrap flex-nowrap px-2 py-1 md:py-2 rounded-md bg-inputBG hover:bg-cardBG transition-all duration-100 ease-in-out w-full h-fit shadow-md drop-shadow-md hover:cursor-pointer"
+							className="md:text-lg font-semibold text-nowrap flex-nowrap px-2 py-1 md:py-2 rounded-md bg-inputBG hover:bg-cardBG transition-all duration-100 ease-in-out  h-fit shadow-md drop-shadow-md hover:cursor-pointer"
 						>
 							{isGridView ? "List View" : "View All"}
 						</button>
@@ -166,7 +166,7 @@ const HomePage = () => {
 						className={`${
 							isGridView
 								? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5"
-								: "flex overflow-x-scroll space-x-2 text-center"
+								: "flex overflow-x-scroll sm:space-x-2 text-center"
 						}`}
 					>
 						{favoriteMovies?.length > 0 ? (
