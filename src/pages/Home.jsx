@@ -26,10 +26,6 @@ const HomePage = () => {
 		}
 	};
 
-	useEffect(() => {
-		fetchMovies(searchWord);
-	}, [searchWord]);
-
 	const handleFavorite = (movieID) => {
 		const movie = movies.find((m) => m.imdbID === movieID);
 
@@ -43,6 +39,10 @@ const HomePage = () => {
 			}
 		});
 	};
+
+	useEffect(() => {
+		fetchMovies(searchWord);
+	}, [searchWord]);
 
 	// saving movie to local storage...
 	useEffect(() => {
@@ -59,7 +59,7 @@ const HomePage = () => {
 	};
 
 	return (
-		<section className="min-h-screen w-full">
+		<section className="min-h-screen w-full text-textColor">
 			{/* Hero Section */}
 			<section className="w-full h-screen bg-heroImage2 bg-cover bg-no-repeat bg-center">
 				<div className="bg-gradient-to-t from-bgColor to-transparent via-bgColor/80 w-full h-full flex flex-col items-center justify-center space-y-10">
@@ -72,7 +72,7 @@ const HomePage = () => {
                   </div> */}
 						<div className="flex  flex-col items-center justify-center">
 							<img src={logoW} alt="logo" className="w-2/3 md:w-full" />
-							<p className="text-sm md:text-xl my-2 italic text-center font-bold text-white">
+							<p className="text-sm md:text-xl my-2 italic text-center font-bold">
 								A whole universe of movies at your fingertips
 							</p>
 						</div>
@@ -87,14 +87,14 @@ const HomePage = () => {
 			{/* Content Section */}
 			<section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
 				{/* Latest Updates */}
-				<div className="space-y-4">
+				<div className="space-y-5">
 					<SectionHeading heading="Latest Updates" />
 					<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 ">
 						{movies?.length > 0 ? (
 							movies.map((movie) => (
 								<MovieCard
 									key={movie.imdbID}
-									// imdbID={movie.imdbID}
+									imdbID={movie.imdbID}
 									Poster={movie.Poster}
 									Type={movie.Type}
 									Year={movie.Year}
@@ -119,7 +119,7 @@ const HomePage = () => {
 							favoriteMovies.map((movie) => (
 								<MovieCard
 									key={movie.imdbID}
-									// imdbID={movie.imdbID}
+									imdbID={movie.imdbID}
 									Poster={movie.Poster}
 									Type={movie.Type}
 									Year={movie.Year}

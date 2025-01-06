@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 const MovieCard = ({ imdbID, Poster, Title, Type, Year, CTAbuttons }) => {
 	return (
 		<section className="group">
-			<div className="flex flex-col text-center p-2 bg-cardBG rounded-xl shadow-md h-full justify-start items-center relative  max-w-md">
-				<p>{imdbID}</p>
-				<img src={Poster} alt={Title} className="rounded-lg h-[250px]" />
-				<p className="text-lg font-semibold ">{Title}</p>
-				<p>{Year}</p>
-				<p>{Type}</p>
+			<div className="flex flex-col text-center bg-cardBG rounded-lg shadow-lg shadow-textColor  h-full justify-start items-center relative max-w-md group-hover:scale-105 transition-all duration-500 ease-in-out">
+				<img src={Poster} alt={Title} className="rounded-lg w-full h-full" />
+				<div className="absolute bottom-0 w-full h-20 bg-gradient-to-t from-cardBG rounded-b-lg to-bgColor text-left px-2 hidden group-hover:block">
+					<p className="hidden">{imdbID}</p>
+					<p className="text-lg font-semibold">{Title}</p>
+					<p>{Year}</p>
+					<p className="hidden">{Type}</p>
+				</div>
 				<CTAbuttons />
 			</div>
 		</section>
