@@ -141,7 +141,7 @@ const HomePage = () => {
 									/>
 								))
 							) : (
-								<div className="col-span-full text-center py-5 animate-pulse text-base md:text-lg font-semibold">
+								<div className="col-span-full text-center py-5 animate-pulse text-base md:text-lg font-semibold text-textColor">
 									<p>
 										No movies to display! Start by searching for your favorite
 										movies above.
@@ -184,7 +184,7 @@ const HomePage = () => {
 								/>
 							))
 						) : (
-							<div className="col-span-full text-center py-10 animate-bounce w-full">
+							<div className="col-span-full text-center py-10 animate-bounce w-full text-textColor">
 								<p className="text-base md:text-lg font-semibold">
 									Your favorites list is feeling a little lonely...
 								</p>
