@@ -10,7 +10,7 @@ const API_URL = "http://www.omdbapi.com?apikey=65b57874";
 
 const HomePage = () => {
 	const [movies, setMovies] = useState([]);
-	const [searchWord, setSearchWord] = useState("2025");
+	const [searchWord, setSearchWord] = useState("");
 	const [favoriteMovies, setFavoriteMovies] = useState([]);
 
 	const fetchMovies = async (searchWord) => {
@@ -99,7 +99,7 @@ const HomePage = () => {
 							/>
 						))
 					) : (
-						<div className="col-span-full text-center py-5 animate-pulse text-red-800 font-medium">
+						<div className="col-span-full text-center py-5 animate-pulse text-base md:text-lg font-semibold">
 							<p>
 								No movies to display! Start by searching for your favorite
 								movies above.
