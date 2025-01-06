@@ -1,12 +1,12 @@
 import logoB from "/images/movieverseBlack.png";
-import logoW from "/images/movieverseWhite.png";
+// import logoW from "/images/movieverseWhite.png";
 import { useEffect, useState } from "react";
 import SectionHeading from "../components/SectionHeading";
 import SearchBox from "../components/SearchBox";
 import MovieCard from "../components/MovieCard";
 import MovieCTAbuttons from "../components/MovieCTAbuttons";
 
-const API_URL = "http://www.omdbapi.com?apikey=65b57874";
+const API_URL = "https://www.omdbapi.com?apikey=65b57874";
 
 const HomePage = () => {
 	const [movies, setMovies] = useState([]);
