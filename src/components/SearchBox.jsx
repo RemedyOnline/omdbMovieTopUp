@@ -7,7 +7,7 @@ const SearchBox = ({ value, onChange }) => {
 	};
 
 	return (
-		<section className="w-full flex items-center justify-center">
+		<section className="w-full flex items-center justify-center sticky top-8 z-10">
 			<form
 				role="search"
 				onSubmit={handleSubmit}
