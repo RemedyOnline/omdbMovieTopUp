@@ -5,6 +5,7 @@ import SearchBox from "../components/SearchBox";
 import MovieCard from "../components/MovieCard";
 import MovieCTAbuttons from "../components/MovieCTAbuttons";
 import topRatedMovies from "../constants/topRated";
+import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 
 const API_URL = "https://www.omdbapi.com?apikey=65b57874";
 
@@ -153,13 +154,16 @@ const HomePage = () => {
 				</div>
 				{/* Favorite Section */}
 				<div className="space-y-0 sm:space-y-2 md:space-y-4 w-full">
-					<div className="flex items-center justify-around">
+					<div className="flex items-center justify-between">
 						<SectionHeading heading="My Favorite" />
 						<button
 							onClick={toggleViewMode}
-							className="md:text-lg font-semibold text-nowrap flex-nowrap px-2 py-1 md:py-2 rounded-md bg-inputBG hover:bg-cardBG transition-all duration-100 ease-in-out  h-fit shadow-md drop-shadow-md hover:cursor-pointer"
+							className="flex items-end md:text-lg font-semibold text-nowrap flex-nowrap px-2 py-1 md:py-2 rounded-md bg-inputBG hover:bg-cardBG transition-all duration-100 ease-in-out  h-fit shadow-md  hover:cursor-pointer"
 						>
-							{isGridView ? "List View" : "View All"}
+							{isGridView ? "Scroll Mode" : "Browse All"}
+							<span>
+								{isGridView ? <IconChevronUp /> : <IconChevronDown />}
+							</span>
 						</button>
 					</div>
 					<div
