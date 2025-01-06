@@ -7,8 +7,10 @@ const MovieCard = ({ imdbID, Poster, Title, Type, Year, CTAbuttons }) => {
 				<img src={Poster} alt={Title} className="rounded-lg w-full h-full" />
 				<div className="absolute bottom-0 w-full h-20 bg-gradient-to-t from-cardBG rounded-b-lg to-bgColor text-left px-2 hidden group-hover:block">
 					<p className="hidden">{imdbID}</p>
-					<p className="text-lg font-semibold">{Title}</p>
-					<p>{Year}</p>
+					<p className="md:text-lg font-semibold text-wrap overflow-hidden">
+						{Title}
+					</p>
+					<p className="text-sm md:text-base font-mono ">{Year}</p>
 					<p className="hidden">{Type}</p>
 				</div>
 				<CTAbuttons />
