@@ -157,7 +157,7 @@ const HomePage = () => {
 						<SectionHeading heading="My Favorite" />
 						<button
 							onClick={toggleViewMode}
-							className="md:text-lg font-semibold text-nowrap flex-nowrap px-2 py-1 md:py-2 rounded-md bg-inputBG hover:bg-cardBG transition-all duration-100 ease-in-out  h-fit shadow-md drop-shadow-md hover:cursor-pointer"
+							className="md:text-lg font-semibold text-nowrap flex-nowrap px-2 py-1 md:py-2 rounded-md bg-inputBG hover:bg-cardBG transition-all duration-100 ease-in-out w-full h-fit shadow-md drop-shadow-md hover:cursor-pointer"
 						>
 							{isGridView ? "List View" : "View All"}
 						</button>
