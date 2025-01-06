@@ -90,7 +90,7 @@ const HomePage = () => {
 							A whole universe of movies at your fingertips
 						</p>
 					</div>
-					<div className="space-y-2 md:space-y-4 w-full px-4 sm:px-6 lg:px-8 py-5 ">
+					<div className="space-y-0 sm:space-y-2 md:space-y-4 w-full px-4 sm:px-6 lg:px-8 py-5 ">
 						<SectionHeading heading="Top Rated" />
 						<div className="flex overflow-x-scroll space-x-2">
 							{topRatedMovies?.length > 0 ? (
@@ -125,7 +125,7 @@ const HomePage = () => {
 						onChange={(event) => setSearchWord(event.target.value)}
 					/>
 					{/* Latest Updates */}
-					<div className="space-y-2 md:space-y-4 w-full">
+					<div className="space-y-0 sm:space-y-2 md:space-y-4 w-full">
 						<SectionHeading heading="Latest Updates" />
 						<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
 							{movies?.length > 0 ? (
@@ -152,7 +152,7 @@ const HomePage = () => {
 					</div>
 				</div>
 				{/* Favorite Section */}
-				<div className="space-y-2 md:space-y-4 w-full">
+				<div className="space-y-0 sm:space-y-2 md:space-y-4 w-full">
 					<div className="flex items-center justify-between">
 						<SectionHeading heading="My Favorite" />
 						<button

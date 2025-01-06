@@ -1,5 +1,53 @@
 const topRatedMovies = [
 	{
+		Title: "Avengers: Endgame",
+		Year: "2019",
+		imdbID: "tt4154796",
+		Type: "movie",
+		Poster:
+			"https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
+	},
+	{
+		Title: "Inside Out 2",
+		Year: "2024",
+		imdbID: "tt22022452",
+		Type: "movie",
+		Poster:
+			"https://m.media-amazon.com/images/M/MV5BYWY3MDE2Y2UtOTE3Zi00MGUzLTg2MTItZjE1ZWVkMGVlODRmXkEyXkFqcGc@._V1_SX300.jpg",
+	},
+	{
+		Title: "A Country Called Ghana",
+		Year: "2024",
+		imdbID: "tt32167216",
+		Type: "movie",
+		Poster:
+			"https://m.media-amazon.com/images/M/MV5BODhjNmI4YWItOGRiZC00YjYxLTkyN2YtNTQxZmMzZDVhMzVjXkEyXkFqcGc@._V1_SX300.jpg",
+	},
+	{
+		Title: "Mortal Kombat",
+		Year: "2021",
+		imdbID: "tt0293429",
+		Type: "movie",
+		Poster:
+			"https://m.media-amazon.com/images/M/MV5BNmRmN2I5M2EtNDA1Ny00N2ZmLWE3YWYtMjQ1NTFjY2Q4NWM5XkEyXkFqcGc@._V1_SX300.jpg",
+	},
+	{
+		Title: "Beauty and the Beast",
+		Year: "2017",
+		imdbID: "tt2771200",
+		Type: "movie",
+		Poster:
+			"https://m.media-amazon.com/images/M/MV5BMTUwNjUxMTM4NV5BMl5BanBnXkFtZTgwODExMDQzMTI@._V1_SX300.jpg",
+	},
+	{
+		Title: "Rambo",
+		Year: "2008",
+		imdbID: "tt0462499",
+		Type: "movie",
+		Poster:
+			"https://m.media-amazon.com/images/M/MV5BMTI5Mjg1MzM4NF5BMl5BanBnXkFtZTcwNTAyNzUzMw@@._V1_SX300.jpg",
+	},
+	{
 		Title: "The Flash",
 		Year: "2023",
 		imdbID: "tt0439572",
@@ -14,30 +62,6 @@ const topRatedMovies = [
 		Type: "movie",
 		Poster:
 			"https://m.media-amazon.com/images/M/MV5BOGZlN2EzOTYtMzUzOS00NTM3LTg0MTQtZDVjZGM4YmJlNWNhXkEyXkFqcGc@._V1_SX300.jpg",
-	},
-	{
-		Title: "Avengers: Endgame",
-		Year: "2019",
-		imdbID: "tt4154796",
-		Type: "movie",
-		Poster:
-			"https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
-	},
-	{
-		Title: "Mortal Kombat",
-		Year: "2021",
-		imdbID: "tt0293429",
-		Type: "movie",
-		Poster:
-			"https://m.media-amazon.com/images/M/MV5BNmRmN2I5M2EtNDA1Ny00N2ZmLWE3YWYtMjQ1NTFjY2Q4NWM5XkEyXkFqcGc@._V1_SX300.jpg",
-	},
-	{
-		Title: "Inside Out 2",
-		Year: "2024",
-		imdbID: "tt22022452",
-		Type: "movie",
-		Poster:
-			"https://m.media-amazon.com/images/M/MV5BYWY3MDE2Y2UtOTE3Zi00MGUzLTg2MTItZjE1ZWVkMGVlODRmXkEyXkFqcGc@._V1_SX300.jpg",
 	},
 	{
 		Title: "Tell Me Your Secrets",
@@ -110,6 +134,14 @@ const topRatedMovies = [
 		Type: "movie",
 		Poster:
 			"https://m.media-amazon.com/images/M/MV5BMmU2ZGYyZDAtZGM3My00NjQ4LTlmZmQtNzY4OGRlNDFjNTE4XkEyXkFqcGc@._V1_SX300.jpg",
+	},
+	{
+		Title: "Hard Target",
+		Year: "1993",
+		imdbID: "tt0107076",
+		Type: "movie",
+		Poster:
+			"https://m.media-amazon.com/images/M/MV5BMTBkNzJmZTMtMTNlMy00ZTA0LTg1YzMtZGUyNWUwNTIxZDY2XkEyXkFqcGc@._V1_SX300.jpg",
 	},
 ];
 
