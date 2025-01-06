@@ -11,7 +11,10 @@ const API_URL = "https://www.omdbapi.com?apikey=65b57874";
 const HomePage = () => {
 	const [movies, setMovies] = useState([]);
 	const [searchWord, setSearchWord] = useState("");
-	const [favoriteMovies, setFavoriteMovies] = useState([]);
+	const [favoriteMovies, setFavoriteMovies] = useState(() => {
+		const savedMovie = localStorage.getItem("myFavoriteMovies");
+		return savedMovie ? JSON.parse(savedMovie) : [];
+	});
 
 	const fetchMovies = async (searchWord) => {
 		const request = await fetch(`${API_URL}&s=${searchWord}`);
@@ -45,14 +48,6 @@ const HomePage = () => {
 	useEffect(() => {
 		localStorage.setItem("myFavoriteMovies", JSON.stringify(favoriteMovies));
 	}, [favoriteMovies]);
-
-	// retrieving saved movies from local storage...
-	useEffect(() => {
-		const savedMovie = localStorage.getItem("myFavoriteMovies");
-		if (savedMovie) {
-			setFavoriteMovies(JSON.parse(savedMovie));
-		}
-	}, []);
 
 	const renderCTAButtons = (movieID) => {
 		return () => (
