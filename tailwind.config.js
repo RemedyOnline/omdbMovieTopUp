@@ -11,9 +11,9 @@ export default {
 				bgColor: "#155e75",
 			},
 			backgroundImage: {
-				heroImage: "url('public/images/movieBG.png')",
-				heroImage2: "url('public/images/movieverse4.jpg')",
-				heroImage3: "url('public/images/movieverse5.jpg')",
+				heroImage: "url('/images/movieBG.png')",
+				heroImage2: "url('/images/movieverse4.jpg')",
+				heroImage3: "url('/images/movieverse5.jpg')",
 			},
 		},
 	},
