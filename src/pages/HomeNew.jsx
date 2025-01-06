@@ -8,7 +8,7 @@ import MovieCTAbuttons from "../components/MovieCTAbuttons";
 
 const API_URL = "https://www.omdbapi.com?apikey=65b57874";
 
-const HomePage = () => {
+const HomePageNew = () => {
 	const [movies, setMovies] = useState([]);
 	const [searchWord, setSearchWord] = useState("");
 	const [favoriteMovies, setFavoriteMovies] = useState(() => {
@@ -70,6 +70,7 @@ const HomePage = () => {
                         A whole universe of movies at your fingertips
                      </p>
                   </div> */}
+						{/* Hero Section */}
 						<div className="flex  flex-col items-center justify-center">
 							<img src={logoW} alt="logo" className="w-2/3 md:w-full" />
 							<p className="text-sm md:text-xl my-2 italic text-center font-bold text-white">
@@ -77,12 +78,19 @@ const HomePage = () => {
 							</p>
 						</div>
 					</div>
+				</div>
+			</section>
+
+			{/* Sticky Search Box */}
+			<div className="sticky top-0 z-50 bg-bgColor/95 backdrop-blur-sm py-4">
+				<div className="max-w-7xl mx-auto">
 					<SearchBox
 						value={searchWord}
 						onChange={(event) => setSearchWord(event.target.value)}
+						placeholder="Search for movies..."
 					/>
 				</div>
-			</section>
+			</div>
 
 			{/* Content Section */}
 			<section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
@@ -145,4 +153,4 @@ const HomePage = () => {
 	);
 };
 
-export default HomePage;
+export default HomePageNew;
