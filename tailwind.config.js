@@ -5,6 +5,7 @@ export default {
 		extend: {
 			colors: {
 				themeColor: "#006F76",
+				textColor2: "#fff",
 				textColor: "#083344",
 				inputBG: "#0891B2",
 				cardBG: "#0E7490",
@@ -17,5 +18,20 @@ export default {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [
+		function ({ addUtilities }) {
+			addUtilities({
+				".scrollbar-hide": {
+					"-ms-overflow-style": "none", // IE and Edge
+					"scrollbar-width": "none", // Firefox
+				},
+				".scrollbar-hide::-webkit-scrollbar": {
+					display: "none", // Chrome, Safari
+				},
+				".scrollbar-visible::-webkit-scrollbar": {
+					display: "block",
+				},
+			});
+		},
+	],
 };

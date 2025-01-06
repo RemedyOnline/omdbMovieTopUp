@@ -1,4 +1,3 @@
-import logoB from "/images/movieverseBlack.png";
 import logoW from "/images/movieverseWhite.png";
 import { useEffect, useState } from "react";
 import SectionHeading from "../components/SectionHeading";
@@ -79,29 +78,21 @@ const HomePage = () => {
 	};
 
 	return (
-		<section className="min-h-screen w-full text-textColor">
+		<section className="min-h-screen w-full text-textColor2">
 			{/* Hero Section */}
 			<section
 				className={`w-full h-screen ${currentHeroBG} bg-cover bg-no-repeat bg-center transition-all duration-700`}
 			>
 				<div className="bg-gradient-to-t from-bgColor to-transparent via-bgColor/80 w-full h-full flex flex-col items-center justify-end ">
-					<div className="flex gap-2">
-						{/* <div className="flex flex-col items-center justify-center">
-                     <img src={logoB} alt="logo" className="" />
-                     <p className="text-sm md:text-xl my-2 italic text-center font-bold">
-                        A whole universe of movies at your fingertips
-                     </p>
-                  </div> */}
-						<div className="flex  flex-col items-center justify-center">
-							<img src={logoW} alt="logo" className="w-2/3 md:w-full" />
-							<p className="text-sm md:text-xl my-2 italic text-center font-bold text-white">
-								A whole universe of movies at your fingertips
-							</p>
-						</div>
+					<div className="flex flex-col items-center justify-center">
+						<img src={logoW} alt="logo" className="w-2/3 md:w-full" />
+						<p className="text-sm md:text-xl my-2 italic text-center font-bold text-white">
+							A whole universe of movies at your fingertips
+						</p>
 					</div>
-					<div className="space-y-2 md:space-y-4 w-full px-4 sm:px-6 lg:px-8 py-10">
+					<div className="space-y-2 md:space-y-4 w-full px-4 sm:px-6 lg:px-8 py-5 ">
 						<SectionHeading heading="Top Rated" />
-						<div className="flex">
+						<div className="flex overflow-x-scroll space-x-2">
 							{topRatedMovies?.length > 0 ? (
 								topRatedMovies.map((topRated) => (
 									<MovieCard
@@ -111,7 +102,7 @@ const HomePage = () => {
 										Type={topRated.Type}
 										Year={topRated.Year}
 										Title={topRated.Title}
-										CTAbuttons={renderCTAButtons(topRated.imdbID)}
+										// CTAbuttons={renderCTAButtons(topRated.imdbID)}
 									/>
 								))
 							) : (
@@ -126,7 +117,6 @@ const HomePage = () => {
 					</div>
 				</div>
 			</section>
-
 			{/* Content Section */}
 			<section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
 				<div className="space-y-5">
@@ -136,16 +126,8 @@ const HomePage = () => {
 					/>
 					{/* Latest Updates */}
 					<div className="space-y-2 md:space-y-4 w-full">
-						<div className="flex items-center justify-between">
-							<SectionHeading heading="Latest Updates" />
-							<button
-								onClick={toggleViewMode}
-								className="md:text-lg font-semibold text-nowrap p-2 rounded-lg bg-inputBG hover:bg-cardBG transition-all duration-500 ease-in-out w-fit h-fit shadow-md drop-shadow-md hover:cursor-pointer"
-							>
-								{isGridView ? "List View" : "View All"}
-							</button>
-						</div>
-						<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 ">
+						<SectionHeading heading="Latest Updates" />
+						<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
 							{movies?.length > 0 ? (
 								movies.map((movie) => (
 									<MovieCard
@@ -175,32 +157,41 @@ const HomePage = () => {
 						<SectionHeading heading="My Favorite" />
 						<button
 							onClick={toggleViewMode}
-							className="md:text-lg font-semibold text-nowrap p-2 rounded-lg bg-inputBG hover:bg-cardBG transition-all duration-500 ease-in-out w-fit h-fit shadow-md drop-shadow-md hover:cursor-pointer"
+							className="md:text-lg font-semibold text-nowrap px-2 py-1 md:py-2 rounded-md bg-inputBG hover:bg-cardBG transition-all duration-100 ease-in-out w-fit h-fit shadow-md drop-shadow-md hover:cursor-pointer"
 						>
 							{isGridView ? "List View" : "View All"}
 						</button>
 					</div>
-					<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 ">
+					<div
+						className={`${
+							isGridView
+								? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5"
+								: "flex overflow-x-scroll space-x-2 text-center"
+						}`}
+					>
 						{favoriteMovies?.length > 0 ? (
 							favoriteMovies.map((movie) => (
 								<MovieCard
 									key={movie.imdbID}
 									imdbID={movie.imdbID}
+									z
 									Poster={movie.Poster}
 									Type={movie.Type}
 									Year={movie.Year}
 									Title={movie.Title}
 									CTAbuttons={renderCTAButtons(movie.imdbID)}
+									className={movie.className}
 								/>
 							))
 						) : (
-							<div className="col-span-full text-center py-10 animate-bounce">
+							<div className="col-span-full text-center py-10 animate-bounce w-full">
 								<p className="text-base md:text-lg font-semibold">
 									Your favorites list is feeling a little lonely...
 								</p>
 								<p className="text-sm md:text-base mt-2">
 									Why not add some blockbuster hits or hidden gems to keep it
-									company?
+									company by favoriting some interesting movies you would like
+									to watch in future.??
 								</p>
 							</div>
 						)}

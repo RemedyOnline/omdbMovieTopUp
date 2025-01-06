@@ -6,7 +6,7 @@ const MovieCTAbuttons = ({ isFavorite, onFavoriteClick }) => {
 		<div className="flex gap-2 absolute bottom-3 right-3 transition-all duration-1000 ease-in-out items-end justify-end">
 			<div className="relative group/tooltip">
 				<button
-					className="group-hover:block p-1 rounded-full bg-inputBG hover:bg-cardBG transition-all duration-500 ease-in-out w-fit h-fit shadow-lg drop-shadow-lg"
+					className="group-hover:block p-1 rounded-full bg-inputBG hover:bg-cardBG transition-all duration-300 ease-in-out w-fit h-fit shadow-lg drop-shadow-lg"
 					onClick={onFavoriteClick}
 				>
 					{isFavorite ? (
@@ -20,7 +20,7 @@ const MovieCTAbuttons = ({ isFavorite, onFavoriteClick }) => {
 				</span>
 			</div>
 			<div className="relative group/tooltip">
-				<button className="group-hover:block p-1 rounded-full bg-inputBG hover:bg-cardBG transition-all duration-500 ease-in-out w-fit h-fit shadow-lg drop-shadow-lg">
+				<button className="group-hover:block p-1 rounded-full bg-inputBG hover:bg-cardBG transition-all duration-300 ease-in-out w-fit h-fit shadow-lg drop-shadow-lg">
 					<IconDots size={24} />
 				</button>
 				<span className="hidden absolute z-10 group-hover/tooltip:block whitespace-nowrap -top-6 -translate-y-1/4 -left-1/2 -translate-x-1/2 text-xs px-2 py-1 rounded-md bg-inputBG shadow-md">

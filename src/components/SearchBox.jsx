@@ -11,7 +11,7 @@ const SearchBox = ({ value, onChange }) => {
 			<form
 				role="search"
 				onSubmit={handleSubmit}
-				className="w-2/3 md:w-3/5 lg:w-1/2 bg-inputBG shadow-lg rounded-full md:py-1 px-3 flex gap-2 items-center"
+				className="w-2/3 md:w-3/5 lg:w-1/2 bg-inputBG shadow-lg  rounded-full md:py-1 px-3 flex gap-2 items-center"
 			>
 				<input
 					type="search"
