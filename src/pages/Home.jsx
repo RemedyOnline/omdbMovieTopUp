@@ -48,7 +48,14 @@ const HomePage = () => {
 		console.log(isGridView);
 	};
 
-	const bgImages = ["bg-heroImage", "bg-heroImage2", "bg-heroImage3"];
+	const bgImages = [
+		"bg-heroImage",
+		"bg-heroImage2",
+		"bg-heroImage3",
+		"bg-heroImage4",
+		"bg-heroImage5",
+		"bg-heroImage6",
+	];
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -56,7 +63,7 @@ const HomePage = () => {
 				const nextBgIndex = (bgImages.indexOf(prevBg) + 1) % bgImages.length;
 				return bgImages[nextBgIndex];
 			});
-		}, 5000);
+		}, 3000);
 		return () => clearInterval(interval);
 	}, []);
 
@@ -119,7 +126,7 @@ const HomePage = () => {
 				</div>
 			</section>
 			{/* Content Section */}
-			<section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+			<section className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
 				<div className="space-y-5">
 					<SearchBox
 						value={searchWord}
@@ -158,10 +165,10 @@ const HomePage = () => {
 						<SectionHeading heading="My Favorite" />
 						<button
 							onClick={toggleViewMode}
-							className="flex items-end md:text-lg font-semibold text-nowrap flex-nowrap px-2 py-1 md:py-2 rounded-md bg-inputBG hover:bg-cardBG transition-all duration-100 ease-in-out  h-fit shadow-md  hover:cursor-pointer"
+							className="flex items-end md:text-lg font-semibold text-nowrap flex-nowrap px-2 py-1 md:py-2 rounded-md bg-inputBG hover:bg-cardBG transition-all duration-100 ease-in-out  h-fit shadow-md  hover:cursor-pointer focus:ring focus:ring-bg-textColor"
 						>
 							{isGridView ? "Scroll Mode" : "Browse All"}
-							<span>
+							<span className="transition-all duration-500 ease-in-out">
 								{isGridView ? <IconChevronUp /> : <IconChevronDown />}
 							</span>
 						</button>

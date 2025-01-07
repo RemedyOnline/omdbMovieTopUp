@@ -11,7 +11,7 @@ const SearchBox = ({ value, onChange }) => {
 			<form
 				role="search"
 				onSubmit={handleSubmit}
-				className="w-2/3 md:w-3/5 lg:w-1/2 bg-inputBG shadow-lg  rounded-full md:py-1 px-3 flex gap-2 items-center"
+				className="w-2/3 md:w-3/5 lg:w-1/2 bg-inputBG shadow-lg  rounded-full md:py-1 px-3 flex gap-2 items-center focus:ring focus:ring-red-600"
 			>
 				<input
 					type="search"
@@ -22,7 +22,7 @@ const SearchBox = ({ value, onChange }) => {
 					autoComplete="off"
 					aria-label="Search for any movie..."
 					placeholder="Search for any movie..."
-					className="w-full bg-transparent md:text-lg placeholder:text-textColor p-2 outline-none"
+					className="w-full bg-transparent md:text-lg placeholder:text-textColor2 p-2 outline-none"
 				/>
 				<button
 					type="submit"
