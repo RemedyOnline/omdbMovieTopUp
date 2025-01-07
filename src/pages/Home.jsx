@@ -135,7 +135,7 @@ const HomePage = () => {
 					{/* Latest Updates */}
 					<div className="space-y-0 sm:space-y-2 md:space-y-4 w-full">
 						<SectionHeading heading="Latest Updates" />
-						<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+						<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5">
 							{movies?.length > 0 ? (
 								movies.map((movie) => (
 									<MovieCard
@@ -176,7 +176,7 @@ const HomePage = () => {
 					<div
 						className={`${
 							isGridView
-								? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5"
+								? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5 mx-auto"
 								: "flex overflow-x-scroll sm:space-x-2 text-center"
 						}`}
 					>
