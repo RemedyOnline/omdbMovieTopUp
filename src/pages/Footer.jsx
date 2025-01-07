@@ -12,7 +12,7 @@ const Footer = () => {
 		<footer className="bg-footerBg bg-cover bg-center text-gray-400">
 			<div className="bg-gradient-to-b from-bgColor to-black opacity-90 py-12">
 				{/* Main Footer Content */}
-				<div className="max-w-7xl mx-auto px-4">
+				<div className="max-w-9xl mx-auto px-4">
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-8">
 						{/* Company Info */}
 						<div className="space-y-4 md:col-span-4">
@@ -93,9 +93,12 @@ const Footer = () => {
 									name="email"
 									id="email"
 									placeholder="Enter your email"
-									className="bg-inputBG p-3 rounded-xl w-full placeholder:text-gray-200 border-textColor2 outline-none focus:ring focus:ring-textColor text-textColor text-lg"
+									className="bg-inputBG p-3 rounded-lg w-full placeholder:text-gray-200 border-textColor2 border bg-opacity-15 outline-none focus:ring focus:ring-textColor text-textColor text-lg"
 								/>
-								<button type="submit" className="p-3 bg-textColor rounded-xl">
+								<button
+									type="submit"
+									className="p-3 bg-bgColor hover:bg-themeColor text-white rounded-lg border border-bgColor shadow-lg drop-shadow-lg font-medium"
+								>
 									Subscribe
 								</button>
 							</form>
