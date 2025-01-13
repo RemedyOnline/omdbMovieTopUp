@@ -1,30 +1,37 @@
 import PropTypes from "prop-types";
 
 const MovieCard = ({ imdbID, Poster, Title, Type, Year, CTAbuttons }) => {
-	return (
-		<section className="group py-5 px-2">
-			<div className="flex flex-col text-center bg-cardBG rounded-lg shadow-lg shadow-textColor   justify-start items-center relative max-w-md group-hover:scale-105 transition-all duration-500 ease-in-out overflow-hidden h-[210px] sm:h-full w-[140px] sm:min-w-[180px]">
-				<img src={Poster} alt={Title} className="rounded-lg  h-full" />
-				<div className="absolute bottom-0 w-full h-20 bg-gradient-to-t from-cardBG rounded-b-lg to-bgColor text-left px-2 hidden group-hover:block">
-					<p className="hidden">{imdbID}</p>
-					<p className="md:text-lg font-semibold text-wrap overflow-hidden">
-						{Title}
-					</p>
-					<p className="text-sm md:text-base font-mono ">{Year}</p>
-					<p className="hidden">{Type}</p>
-				</div>
-				{CTAbuttons && <CTAbuttons />}
-			</div>
-		</section>
-	);
+  return (
+    <section className="group flex-shrink-0 px-2 py-5">
+      <div className="relative flex h-[210px] w-[140px] max-w-md flex-col items-center justify-start overflow-hidden rounded-lg bg-cardBG text-center shadow-lg shadow-textColor transition-all duration-500 ease-in-out group-hover:scale-105 sm:h-[280px] sm:w-[180px]">
+        <img src={Poster} alt={Title} className="h-full rounded-lg" />
+
+        {/* <div className="relative flex h-[210px] w-[140px] max-w-md flex-col items-center justify-start overflow-hidden rounded-lg bg-cardBG text-center shadow-lg shadow-textColor transition-all duration-500 ease-in-out group-hover:scale-105 sm:h-[280px] sm:w-[180px]">
+        <img
+          src={Poster}
+          alt={Title}
+          className="h-full w-full rounded-lg object-cover"
+        /> */}
+        <div className="absolute bottom-0 hidden h-20 w-full rounded-b-lg bg-gradient-to-t from-cardBG to-bgColor px-2 text-left group-hover:block">
+          <p className="hidden">{imdbID}</p>
+          <p className="overflow-hidden text-wrap font-semibold md:text-lg">
+            {Title}
+          </p>
+          <p className="font-mono text-sm md:text-base">{Year}</p>
+          <p className="hidden">{Type}</p>
+        </div>
+        {CTAbuttons && <CTAbuttons />}
+      </div>
+    </section>
+  );
 };
 
 MovieCard.propTypes = {
-	Poster: PropTypes.node,
-	imdbID: PropTypes.string,
-	Title: PropTypes.string,
-	Type: PropTypes.string,
-	Year: PropTypes.string,
-	CTAbuttons: PropTypes.func,
+  Poster: PropTypes.node,
+  imdbID: PropTypes.string,
+  Title: PropTypes.string,
+  Type: PropTypes.string,
+  Year: PropTypes.string,
+  CTAbuttons: PropTypes.func,
 };
 export default MovieCard;
