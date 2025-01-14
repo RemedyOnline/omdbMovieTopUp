@@ -89,7 +89,7 @@ const HomePage = () => {
     <section className="min-h-screen w-full text-textColor2">
       {/* Hero Section */}
       <section
-        className={`h-screen w-full ${currentHeroBG} bg-cover bg-center bg-no-repeat transition-all duration-700`}
+        className={`h-screen w-full ${currentHeroBG} bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in`}
       >
         <div className="flex h-full w-full flex-col items-center justify-end bg-gradient-to-t from-bgColor via-bgColor/80 to-transparent">
           <div className="flex flex-col items-center justify-center">
@@ -101,7 +101,7 @@ const HomePage = () => {
           <div className="w-full space-y-0 px-4 py-5 sm:space-y-2 sm:px-6 md:space-y-4 lg:px-8">
             <SectionHeading heading="Top Rated" />
             <div className="relative w-full overflow-hidden">
-              <div className="hover:pause-animation flex animate-marquee sm:space-x-2">
+              <div className="flex animate-marquee hover:pause-animation sm:space-x-2">
                 {topRatedMovies?.length > 0 ? (
                   <>
                     {topRatedMovies.map((topRated) => (
