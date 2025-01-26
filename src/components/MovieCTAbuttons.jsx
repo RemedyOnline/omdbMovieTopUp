@@ -11,8 +11,8 @@ const MovieCTAbuttons = ({ isFavorite, onFavoriteClick }) => {
           {isFavorite ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="currentColor"
               className="icon icon-tabler icons-tabler-filled icon-tabler-heart"
@@ -23,8 +23,8 @@ const MovieCTAbuttons = ({ isFavorite, onFavoriteClick }) => {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -40,7 +40,7 @@ const MovieCTAbuttons = ({ isFavorite, onFavoriteClick }) => {
             </svg>
           )}
         </button>
-        <span className="absolute -bottom-0 -right-1/3 hidden -translate-x-1/2 -translate-y-1/4 whitespace-nowrap rounded-md bg-inputBG px-2 py-1 text-xs shadow-md group-hover/tooltip:block">
+        <span className="absolute -left-1/2 -top-6 z-10 hidden -translate-x-1/2 -translate-y-1/4 whitespace-nowrap rounded-md bg-inputBG px-2 py-1 text-xs shadow-md group-hover/tooltip:block">
           {isFavorite ? "Remove from Favorite" : "Add to favorite"}
         </span>
       </div>
@@ -48,8 +48,8 @@ const MovieCTAbuttons = ({ isFavorite, onFavoriteClick }) => {
         <button className="h-fit w-fit rounded-full bg-inputBG p-1 shadow-lg drop-shadow-lg transition-all duration-300 ease-in-out hover:bg-cardBG group-hover:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
