@@ -200,7 +200,6 @@ const HomePage = () => {
                 <MovieCard
                   key={movie.imdbID}
                   imdbID={movie.imdbID}
-                  z
                   Poster={movie.Poster}
                   Type={movie.Type}
                   Year={movie.Year}
@@ -210,7 +209,7 @@ const HomePage = () => {
                 />
               ))
             ) : (
-              <div className="col-span-full w-full animate-bounce py-10 text-center text-gray-400">
+              <div className="col-span-full w-full animate-bounce py-20 text-center text-gray-400">
                 <p className="text-base font-semibold md:text-lg">
                   Your favorites list is feeling a little lonely...
                 </p>
