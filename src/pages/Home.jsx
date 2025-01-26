@@ -89,7 +89,7 @@ const HomePage = () => {
     <section className="min-h-screen w-full text-textColor2">
       {/* Hero Section */}
       <section
-        className={`h-screen w-full ${currentHeroBG} bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in`}
+        className={`h-screen w-full ${currentHeroBG} bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-linear`}
       >
         <div className="flex h-full w-full flex-col items-center justify-end bg-gradient-to-t from-bgColor via-bgColor/80 to-transparent">
           <div className="flex flex-col items-center justify-center">
@@ -150,7 +150,7 @@ const HomePage = () => {
           {/* Latest Updates */}
           <div className="w-full space-y-0 sm:space-y-2 md:space-y-4">
             <SectionHeading heading="Latest Updates" />
-            <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            <div className="grid grid-cols-3 gap-0 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
               {movies?.length > 0 ? (
                 movies.map((movie) => (
                   <MovieCard
@@ -191,8 +191,8 @@ const HomePage = () => {
           <div
             className={`${
               isGridView
-                ? "mx-auto grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
-                : "flex overflow-x-scroll text-center sm:space-x-2"
+                ? "mx-auto grid grid-cols-3 gap-0 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
+                : "mx-0 flex overflow-x-scroll text-center sm:space-x-2"
             }`}
           >
             {favoriteMovies?.length > 0 ? (

@@ -12,7 +12,7 @@ export default {
         bgColor: "#155e75",
       },
       backgroundImage: {
-        heroImage: "url('/images/heroImage1.png')",
+        heroImage: "url('/images/heroImage1.jpg')",
         heroImage9: "url('/images/heroImage1.png')",
         heroImage2: "url('/images/heroImage2.jpg')",
         heroImage3: "url('/images/heroImage3.jpg')",
