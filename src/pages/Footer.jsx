@@ -161,7 +161,11 @@ const Footer = () => {
                   </li>
                 </ul>
                 <p className="text-center text-sm md:text-base">
-                  © 2024 The African Wave. All Rights Reserved.
+                  <span className="font-mono font-semibold">© 2024</span>{" "}
+                  <span className="font-semibold text-inputBG">
+                    The African Wave.
+                  </span>{" "}
+                  All Rights Reserved.
                 </p>
               </div>
             </div>
