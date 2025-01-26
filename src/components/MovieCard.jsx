@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const MovieCard = ({ imdbID, Poster, Title, Type, Year, CTAbuttons }) => {
   return (
     <section className="group mx-auto flex-shrink-0 px-2 py-5">
-      <div className="relative flex h-[220px] w-[138px] max-w-md flex-col items-center justify-start overflow-hidden rounded-lg bg-cardBG text-center shadow-lg shadow-textColor transition-all duration-500 ease-in-out group-hover:scale-105 sm:h-[250px] sm:w-[160px]">
+      <div className="relative flex h-[200px] w-[120px] max-w-md flex-col items-center justify-start overflow-hidden rounded-lg bg-cardBG text-center shadow-lg shadow-textColor transition-all duration-500 ease-in-out group-hover:scale-105 sm:h-[250px] sm:w-[160px]">
         <img
           src={Poster}
           alt={Title}
