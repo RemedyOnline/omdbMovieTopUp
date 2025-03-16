@@ -233,10 +233,8 @@ const Footer = () => {
                   </li>
                 </ul>
                 <p className="text-center text-sm md:text-base">
-                  <span className="font-mono font-semibold">© 2024</span>{" "}
-                  <span className="font-semibold text-inputBG">
-                    The African Wave.
-                  </span>{" "}
+                  <span className="font-mono font-semibold">&copy; 2025</span>{" "}
+                  <span className="font-semibold text-inputBG">MovieVerse</span>{" "}
                   All Rights Reserved.
                 </p>
               </div>
