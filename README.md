@@ -19,22 +19,12 @@ _Home Page of MovieVerse_
 ![Favorites & Footer Section](public/screenshots/favorite+footer.png)  
 _Favorites and Footer Section_
 
-## 📷 Screenshots
-
-(C:\Users\hp\Desktop\React.dev\omdbMovieTopUp\public\screenshots\Screenshot 2025-03-16 185926.png)
-(public\screenshots\homePage.png)
-![MovieVerse Home Page](./assets/screenshot1.png)
-_Home Page of MovieVerse_
-
-![Movie Details Page](./assets/screenshot2.png)
-_Detailed movie information page_
-
 ## 🛠️ TECH STACK
 
 - **Frontend:** ReactJS, TailwindCSS
-- **State Management:** (React Context API)
-- **API:** (OMDb API)
-- **Other Tools:** (React Router, Unsplash)
+- **State Management:** React Context API
+- **API:** OMDb API
+- **Other Tools:** React Router, Unsplash
 
 ## 📦 Installation & Setup
 
