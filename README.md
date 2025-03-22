@@ -19,6 +19,10 @@ _Home Page of MovieVerse_
 ![Favorites & Footer Section](public/screenshots/favorite+footer.png)  
 _Favorites and Footer Section_
 
+## 🔗 LIVE DEMO
+
+https://movieverse-delta.vercel.app/
+
 ## 🛠️ TECH STACK
 
 - **Frontend:** ReactJS, TailwindCSS
